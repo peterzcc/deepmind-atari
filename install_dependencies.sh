@@ -60,11 +60,10 @@ RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
 
 
 path_to_nvcc=$(which nvcc)
-if [ -x "$path_to_nvcc" ]
-then
-    cutorch=ok
-    cunn=ok
-fi
+
+cutorch=ok
+cunn=ok
+
 
 # Install base packages:
 $PREFIX/bin/luarocks install cwrap
