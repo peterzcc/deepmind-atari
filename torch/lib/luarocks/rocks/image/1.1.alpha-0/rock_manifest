@@ -1,0 +1,23 @@
+rock_manifest = {
+   doc = {
+      ['README.md'] = "d58d276856072d5d2a3976cbdcee303f"
+   },
+   ['image-1.1.alpha-0.rockspec'] = "d342861339dace51c351564cdc5c943a",
+   lib = {
+      ['libimage.so'] = "83be898493ec2a32075d9987bed08540",
+      ['libjpeg.so'] = "4c38ac741dcec544f2bf23708018e643",
+      ['libpng.so'] = "e7ccc7b90e666cb233bb38c3129dc62f",
+      ['libppm.so'] = "4e8353579a97c580f0a4d1bbc630c7e3"
+   },
+   lua = {
+      image = {
+         ['README.md'] = "d58d276856072d5d2a3976cbdcee303f",
+         ['fabio.jpg'] = "766d01be7046973350c05e13b898589b",
+         ['fabio.png'] = "18a4c89e35d7841297759119a4337205",
+         ['init.lua'] = "fbe8f244e466d384f3c4c1840aefa31b",
+         ['lena.jpg'] = "1c5c628d6b5341c5c5d8bdb9aa38b391",
+         ['lena.png'] = "af3978167358c086e2fcad7ae119c840",
+         ['win.ui'] = "35c561d48d8f82811fe9b36669d295f2"
+      }
+   }
+}

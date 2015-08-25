@@ -1,0 +1,753 @@
+-framework alewrap -game_path /csproject/dygroup2/czeng/deepmind-atari/roms/ -name DQN3_0_1_breakout_FULL_Y -env breakout -env_params useRGB=true -agent NeuralQLearner -agent_params lr=0.00025,ep=1,ep_end=0.1,ep_endt=replay_memory,discount=0.99,hist_len=4,learn_start=50000,replay_memory=1000000,update_freq=4,n_replay=1,network="convnet_atari3",preproc="net_downsample_2x_full_y",state_dim=7056,minibatch_size=32,rescale_r=1,ncols=1,bufferSize=512,valid_size=500,target_q=10000,clip_delta=1,min_reward=-1,max_reward=1 -steps 50000000 -eval_freq 250000 -eval_steps 125000 -prog_freq 20000 -save_freq 125000 -actrep 4 -gpu 2 -random_starts 30 -pool_frms type="max",size=2 -seed 1 -threads 20
+Torch Threads:	20
+Using GPU device id:	1
+Torch Seed:	1
+CUTorch Seed:	1791095845
+
+Playing:	breakout
+Creating Agent Network from convnet_atari3
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> (11) -> output]
+  (1): nn.Reshape(4x84x84)
+  (2): nn.SpatialConvolution(4 -> 32, 8x8, 4,4, 1,1)
+  (3): nn.Rectifier
+  (4): nn.SpatialConvolution(32 -> 64, 4x4, 2,2)
+  (5): nn.Rectifier
+  (6): nn.SpatialConvolution(64 -> 64, 3x3)
+  (7): nn.Rectifier
+  (8): nn.Reshape(3136)
+  (9): nn.Linear(3136 -> 512)
+  (10): nn.Rectifier
+  (11): nn.Linear(512 -> 4)
+}
+Convolutional layers flattened output size:	3136
+Set up Torch using these options:
+eval_steps	125000
+seed	1
+name	DQN3_0_1_breakout_FULL_Y
+verbose	2
+network	
+pool_frms	table: 0x40f35e50
+saveNetworkParams	false
+gpu	2
+eval_freq	250000
+tensorType	torch.FloatTensor
+env_params	table: 0x4145c9d8
+steps	50000000
+prog_freq	20000
+agent_params	table: 0x40e889d0
+save_versions	0
+framework	alewrap
+agent	NeuralQLearner
+threads	20
+actrep	4
+random_starts	30
+game_path	/csproject/dygroup2/czeng/deepmind-atari/roms/
+save_freq	125000
+env	breakout
+Iteration ..	0
+Steps: 	20000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031250547486678 nn.SpatialConvolution: 0.022043455387269 nn.SpatialConvolution: 0.020861273230706 nn.Linear: 0.0089306492979433 nn.Linear: 0.021953111231778]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.062490303069353 nn.SpatialConvolution: 0.044192489236593 nn.SpatialConvolution: 0.041665859520435 nn.Linear: 0.017857132479548 nn.Linear: 0.044181495904922]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0 nn.SpatialConvolution: 0 nn.SpatialConvolution: 0 nn.Linear: 0 nn.Linear: 0]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0 nn.SpatialConvolution: 0 nn.SpatialConvolution: 0 nn.Linear: 0 nn.Linear: 0]
+Steps: 	40000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031250547486678 nn.SpatialConvolution: 0.022043455387269 nn.SpatialConvolution: 0.020861273230706 nn.Linear: 0.0089306492979433 nn.Linear: 0.021953111231778]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.062490303069353 nn.SpatialConvolution: 0.044192489236593 nn.SpatialConvolution: 0.041665859520435 nn.Linear: 0.017857132479548 nn.Linear: 0.044181495904922]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0 nn.SpatialConvolution: 0 nn.SpatialConvolution: 0 nn.Linear: 0 nn.Linear: 0]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0 nn.SpatialConvolution: 0 nn.SpatialConvolution: 0 nn.Linear: 0 nn.Linear: 0]
+Steps: 	60000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031255959391919 nn.SpatialConvolution: 0.02204456926518 nn.SpatialConvolution: 0.020863076797105 nn.Linear: 0.0089307495880917 nn.Linear: 0.021983646534908]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.062646865844727 nn.SpatialConvolution: 0.04462007060647 nn.SpatialConvolution: 0.042609352618456 nn.Linear: 0.018553780391812 nn.Linear: 0.048941545188427]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 8.0632928658749e-05 nn.SpatialConvolution: 3.0473298897467e-05 nn.SpatialConvolution: 3.4612726407263e-05 nn.Linear: 7.616237085823e-06 nn.Linear: 0.00019250453476326]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.00048749343841337 nn.SpatialConvolution: 0.00087447196710855 nn.SpatialConvolution: 0.00090860517229885 nn.Linear: 0.00060709216631949 nn.Linear: 0.0033532986417413]
+Steps: 	80000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031262060651538 nn.SpatialConvolution: 0.022046443986293 nn.SpatialConvolution: 0.020865602576864 nn.Linear: 0.008930980447242 nn.Linear: 0.022070663286229]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.063502267003059 nn.SpatialConvolution: 0.045532684773207 nn.SpatialConvolution: 0.043052867054939 nn.Linear: 0.019193679094315 nn.Linear: 0.0510059222579]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00022901973770372 nn.SpatialConvolution: 7.2612248061396e-05 nn.SpatialConvolution: 7.7939501187095e-05 nn.Linear: 1.3690826024954e-05 nn.Linear: 0.00042250604291108]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0011421683011577 nn.SpatialConvolution: 0.0022361662704498 nn.SpatialConvolution: 0.0024698677007109 nn.Linear: 0.0012330574681982 nn.Linear: 0.0072289952076972]
+Steps: 	100000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031265731824199 nn.SpatialConvolution: 0.022047896287287 nn.SpatialConvolution: 0.020868106135652 nn.Linear: 0.0089312709152768 nn.Linear: 0.022173027260557]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.064464867115021 nn.SpatialConvolution: 0.046256251633167 nn.SpatialConvolution: 0.0435761064291 nn.Linear: 0.01985103264451 nn.Linear: 0.051779709756374]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0014694167128226 nn.SpatialConvolution: 0.00055335257670168 nn.SpatialConvolution: 0.00065173943677976 nn.Linear: 0.00015834615969636 nn.Linear: 0.0038443651996932]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.010274536907673 nn.SpatialConvolution: 0.016526762396097 nn.SpatialConvolution: 0.01983255147934 nn.Linear: 0.010072696954012 nn.Linear: 0.14629732072353]
+Steps: 	120000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031266372413529 nn.SpatialConvolution: 0.022048940629774 nn.SpatialConvolution: 0.020870631001072 nn.Linear: 0.0089316159494119 nn.Linear: 0.022277963188462]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.065553650259972 nn.SpatialConvolution: 0.046535335481167 nn.SpatialConvolution: 0.044253699481487 nn.Linear: 0.020375760272145 nn.Linear: 0.052620813250542]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0006180064135916 nn.SpatialConvolution: 0.00019015512545972 nn.SpatialConvolution: 0.00019259239214509 nn.Linear: 3.6011595160058e-05 nn.Linear: 0.0011547123523627]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0033111146185547 nn.SpatialConvolution: 0.0050144577398896 nn.SpatialConvolution: 0.0057800547219813 nn.Linear: 0.0026218143757433 nn.Linear: 0.031513571739197]
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	140000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031265445826227 nn.SpatialConvolution: 0.022049799615072 nn.SpatialConvolution: 0.020872941846433 nn.Linear: 0.0089319614199129 nn.Linear: 0.022352919442929]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.066432014107704 nn.SpatialConvolution: 0.046749826520681 nn.SpatialConvolution: 0.044933639466763 nn.Linear: 0.020730767399073 nn.Linear: 0.053535461425781]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00068261193808218 nn.SpatialConvolution: 0.00021871628723843 nn.SpatialConvolution: 0.00021974453084911 nn.Linear: 3.4748331932061e-05 nn.Linear: 0.0010282273752693]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0038424702361226 nn.SpatialConvolution: 0.0056579145602882 nn.SpatialConvolution: 0.0064538661390543 nn.Linear: 0.0024331666063517 nn.Linear: 0.034084096550941]
+Steps: 	160000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031264523237471 nn.SpatialConvolution: 0.022050541203383 nn.SpatialConvolution: 0.020874915894155 nn.Linear: 0.0089322873795729 nn.Linear: 0.022393904484714]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.066975571215153 nn.SpatialConvolution: 0.046814121305943 nn.SpatialConvolution: 0.045614268630743 nn.Linear: 0.020956978201866 nn.Linear: 0.053192835301161]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0003710167097557 nn.SpatialConvolution: 0.00012210988108511 nn.SpatialConvolution: 0.0001242600081279 nn.Linear: 2.7352685363341e-05 nn.Linear: 0.0011892942291705]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0022419623564929 nn.SpatialConvolution: 0.0030393155757338 nn.SpatialConvolution: 0.0032683750614524 nn.Linear: 0.0019997030030936 nn.Linear: 0.025195863097906]
+Steps: 	180000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031267216924011 nn.SpatialConvolution: 0.022051489133991 nn.SpatialConvolution: 0.020876935703745 nn.Linear: 0.0089325980435211 nn.Linear: 0.022405916727679]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.067338638007641 nn.SpatialConvolution: 0.046966928988695 nn.SpatialConvolution: 0.046152703464031 nn.Linear: 0.021158961579204 nn.Linear: 0.052627183496952]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0038541640892116 nn.SpatialConvolution: 0.0012196365307069 nn.SpatialConvolution: 0.0012300489921902 nn.Linear: 0.00020242701678105 nn.Linear: 0.0059095948165034]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.02302473783493 nn.SpatialConvolution: 0.031107828021049 nn.SpatialConvolution: 0.031415086239576 nn.Linear: 0.012642901390791 nn.Linear: 0.22958689928055]
+Steps: 	200000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031269909510786 nn.SpatialConvolution: 0.022052075352378 nn.SpatialConvolution: 0.020878401618643 nn.Linear: 0.008932885905548 nn.Linear: 0.022394384801715]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.067487411201 nn.SpatialConvolution: 0.046965435147285 nn.SpatialConvolution: 0.0463374145329 nn.Linear: 0.021302789449692 nn.Linear: 0.0526964366436]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0019822045249271 nn.SpatialConvolution: 0.00062412366592117 nn.SpatialConvolution: 0.00061280917963984 nn.Linear: 8.0197288225903e-05 nn.Linear: 0.003249736235104]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.012395940721035 nn.SpatialConvolution: 0.016511496156454 nn.SpatialConvolution: 0.016766935586929 nn.Linear: 0.0057582864537835 nn.Linear: 0.0649503916502]
+Steps: 	220000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031272930030393 nn.SpatialConvolution: 0.02205264304356 nn.SpatialConvolution: 0.020879881590384 nn.Linear: 0.0089331862211613 nn.Linear: 0.022384970854993]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.067682348191738 nn.SpatialConvolution: 0.046877071261406 nn.SpatialConvolution: 0.046439599245787 nn.Linear: 0.021555777639151 nn.Linear: 0.053205154836178]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0020263330924746 nn.SpatialConvolution: 0.00064258752499626 nn.SpatialConvolution: 0.00061428165198261 nn.Linear: 7.2115977776097e-05 nn.Linear: 0.0033773709218026]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.012744011357427 nn.SpatialConvolution: 0.015622036531568 nn.SpatialConvolution: 0.016598546877503 nn.Linear: 0.0046909581869841 nn.Linear: 0.051496557891369]
+Steps: 	240000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031275382350393 nn.SpatialConvolution: 0.022052860866834 nn.SpatialConvolution: 0.020881128609271 nn.Linear: 0.0089335052904857 nn.Linear: 0.022372942880699]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.067722395062447 nn.SpatialConvolution: 0.04671273380518 nn.SpatialConvolution: 0.046486265957355 nn.Linear: 0.021696969866753 nn.Linear: 0.05341736972332]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0030939557029358 nn.SpatialConvolution: 0.0010118078842417 nn.SpatialConvolution: 0.00095186644817971 nn.Linear: 0.0001144053297397 nn.Linear: 0.0054829640657311]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.018513176590204 nn.SpatialConvolution: 0.023322854191065 nn.SpatialConvolution: 0.025486931204796 nn.Linear: 0.0070971911773086 nn.Linear: 0.081462621688843]
+V	0.22985167425871	TD error	0.0098487692773342	Qmax	1
+
+Steps: 250000 (frames: 1000000), reward: 0.95, epsilon: 0.05, lr: 0.00025, training time: 4678s, training rate: 213fps, testing time: 1137s, testing rate: 439fps,  num. ep.: 821,  num. rewards: 747
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	260000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031275949688598 nn.SpatialConvolution: 0.022052461400012 nn.SpatialConvolution: 0.020881704063356 nn.Linear: 0.0089337858567798 nn.Linear: 0.022360971962095]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.067646250128746 nn.SpatialConvolution: 0.04647333547473 nn.SpatialConvolution: 0.046296749264002 nn.Linear: 0.021765736863017 nn.Linear: 0.052673798054457]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 4.1852653687429e-05 nn.SpatialConvolution: 2.0862573396404e-05 nn.SpatialConvolution: 2.4719553218182e-05 nn.Linear: 1.567400429058e-05 nn.Linear: 0.0010703797395865]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.00022458304010797 nn.SpatialConvolution: 0.00045314736780711 nn.SpatialConvolution: 0.00050074246246368 nn.Linear: 0.0010787319624797 nn.Linear: 0.018148912116885]
+Steps: 	280000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031276469692996 nn.SpatialConvolution: 0.022051937848785 nn.SpatialConvolution: 0.020882009941581 nn.Linear: 0.008934046472193 nn.Linear: 0.022323578877529]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.06743723154068 nn.SpatialConvolution: 0.046381793916225 nn.SpatialConvolution: 0.046150825917721 nn.Linear: 0.021834759041667 nn.Linear: 0.052737262099981]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0049504975675368 nn.SpatialConvolution: 0.0018424519397191 nn.SpatialConvolution: 0.0017127820512034 nn.Linear: 0.00028241257969847 nn.Linear: 0.011195554438937]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.029815506190062 nn.SpatialConvolution: 0.041927084326744 nn.SpatialConvolution: 0.041778441518545 nn.Linear: 0.015300830826163 nn.Linear: 0.35087576508522]
+Steps: 	300000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031276927824347 nn.SpatialConvolution: 0.022051438972586 nn.SpatialConvolution: 0.020882183279719 nn.Linear: 0.0089342921865593 nn.Linear: 0.022281819779002]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.067234121263027 nn.SpatialConvolution: 0.046330776065588 nn.SpatialConvolution: 0.04587622359395 nn.Linear: 0.021957285702229 nn.Linear: 0.052554417401552]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0007201440594133 nn.SpatialConvolution: 0.00025452038328497 nn.SpatialConvolution: 0.0002632890133451 nn.Linear: 5.8304339243032e-05 nn.Linear: 0.0030652455915194]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0042412970215082 nn.SpatialConvolution: 0.0063308314420283 nn.SpatialConvolution: 0.0062624537386 nn.Linear: 0.0032985967118293 nn.Linear: 0.076409362256527]
+Steps: 	320000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031276100669727 nn.SpatialConvolution: 0.022050654505937 nn.SpatialConvolution: 0.020881636052727 nn.Linear: 0.0089344436303614 nn.Linear: 0.022244283400235]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.066837288439274 nn.SpatialConvolution: 0.046606007963419 nn.SpatialConvolution: 0.045516218990088 nn.Linear: 0.02197178825736 nn.Linear: 0.05276221036911]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00051790043242268 nn.SpatialConvolution: 0.00021045184787611 nn.SpatialConvolution: 0.00021155558585548 nn.Linear: 5.7872267386632e-05 nn.Linear: 0.0053042575647971]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0033934118691832 nn.SpatialConvolution: 0.0044552474282682 nn.SpatialConvolution: 0.0047818450257182 nn.Linear: 0.0041844979859889 nn.Linear: 0.065804168581963]
+Steps: 	340000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031279780337055 nn.SpatialConvolution: 0.022051738351043 nn.SpatialConvolution: 0.020883432276416 nn.Linear: 0.0089348001374625 nn.Linear: 0.022270870522572]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.066787511110306 nn.SpatialConvolution: 0.04663098976016 nn.SpatialConvolution: 0.045560624450445 nn.Linear: 0.022103812545538 nn.Linear: 0.052755836397409]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0075019962915547 nn.SpatialConvolution: 0.0030722669308202 nn.SpatialConvolution: 0.0029194983158829 nn.Linear: 0.00040849600973855 nn.Linear: 0.021284805636735]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.04213709756732 nn.SpatialConvolution: 0.066134937107563 nn.SpatialConvolution: 0.068296410143375 nn.Linear: 0.024207452312112 nn.Linear: 0.33444532752037]
+Steps: 	360000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031281586414125 nn.SpatialConvolution: 0.022051769944087 nn.SpatialConvolution: 0.020883862893752 nn.Linear: 0.0089350511591877 nn.Linear: 0.022247399934602]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.066413633525372 nn.SpatialConvolution: 0.046697787940502 nn.SpatialConvolution: 0.045334044843912 nn.Linear: 0.022170512005687 nn.Linear: 0.053051847964525]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0013882033833744 nn.SpatialConvolution: 0.00058404652531964 nn.SpatialConvolution: 0.00057466388649046 nn.Linear: 9.6509408767815e-05 nn.Linear: 0.004744085445029]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0078834323212504 nn.SpatialConvolution: 0.012628105469048 nn.SpatialConvolution: 0.01310311537236 nn.Linear: 0.0048639988526702 nn.Linear: 0.12712556123734]
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	380000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031284947638038 nn.SpatialConvolution: 0.022052466655554 nn.SpatialConvolution: 0.020885076068521 nn.Linear: 0.008935399874602 nn.Linear: 0.022298838571614]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.066130205988884 nn.SpatialConvolution: 0.046822648495436 nn.SpatialConvolution: 0.045299552381039 nn.Linear: 0.022274121642113 nn.Linear: 0.053552452474833]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0039869582589377 nn.SpatialConvolution: 0.0016920180283214 nn.SpatialConvolution: 0.0015989602802303 nn.Linear: 0.00021650109583964 nn.Linear: 0.011584828185151]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0200878046453 nn.SpatialConvolution: 0.035709846764803 nn.SpatialConvolution: 0.036922384053469 nn.Linear: 0.010568526573479 nn.Linear: 0.17181394994259]
+Steps: 	400000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031286438832234 nn.SpatialConvolution: 0.022052580546011 nn.SpatialConvolution: 0.020885217954045 nn.Linear: 0.0089355819013123 nn.Linear: 0.022257481204463]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.066336065530777 nn.SpatialConvolution: 0.047758940607309 nn.SpatialConvolution: 0.045059192925692 nn.Linear: 0.022321831434965 nn.Linear: 0.053526595234871]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00052365945424894 nn.SpatialConvolution: 0.00023447683663714 nn.SpatialConvolution: 0.00023941133520955 nn.Linear: 3.8369119891046e-05 nn.Linear: 0.0028752326027577]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.002510140882805 nn.SpatialConvolution: 0.0050433524884284 nn.SpatialConvolution: 0.0055056414566934 nn.Linear: 0.0023276251740754 nn.Linear: 0.044493552297354]
+Steps: 	420000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031289292239304 nn.SpatialConvolution: 0.022053392365692 nn.SpatialConvolution: 0.02088610648876 nn.Linear: 0.0089358106395288 nn.Linear: 0.02228543298705]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.066771484911442 nn.SpatialConvolution: 0.048377465456724 nn.SpatialConvolution: 0.045010890811682 nn.Linear: 0.022393712773919 nn.Linear: 0.054025515913963]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.000122473725182 nn.SpatialConvolution: 6.6438281935874e-05 nn.SpatialConvolution: 6.9307707152208e-05 nn.Linear: 2.1609113616892e-05 nn.Linear: 0.0022618288879656]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.00059175898786634 nn.SpatialConvolution: 0.0012596060987562 nn.SpatialConvolution: 0.0014077735831961 nn.Linear: 0.0014472096227109 nn.Linear: 0.022052604705095]
+Steps: 	440000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031294263816398 nn.SpatialConvolution: 0.022055003914487 nn.SpatialConvolution: 0.020887751745894 nn.Linear: 0.0089361131674944 nn.Linear: 0.022330952135458]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.067232206463814 nn.SpatialConvolution: 0.048926014453173 nn.SpatialConvolution: 0.045051917433739 nn.Linear: 0.022465338930488 nn.Linear: 0.053950022906065]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.005155616854604 nn.SpatialConvolution: 0.0026944411845541 nn.SpatialConvolution: 0.0026896589655768 nn.Linear: 0.00041674996517554 nn.Linear: 0.023936309707512]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.024626344442368 nn.SpatialConvolution: 0.055032763630152 nn.SpatialConvolution: 0.062666200101376 nn.Linear: 0.020449008792639 nn.Linear: 0.32271108031273]
+Steps: 	460000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031300609041052 nn.SpatialConvolution: 0.02205722835065 nn.SpatialConvolution: 0.020890026269863 nn.Linear: 0.0089364917779273 nn.Linear: 0.022375938302565]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.067636854946613 nn.SpatialConvolution: 0.049505021423101 nn.SpatialConvolution: 0.045165456831455 nn.Linear: 0.022578291594982 nn.Linear: 0.054133433848619]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.003265051486815 nn.SpatialConvolution: 0.0017667432901826 nn.SpatialConvolution: 0.0017862970829048 nn.Linear: 0.00028356448844409 nn.Linear: 0.01421188238104]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.016311710700393 nn.SpatialConvolution: 0.036054894328117 nn.SpatialConvolution: 0.04025549069047 nn.Linear: 0.01250806171447 nn.Linear: 0.29447785019875]
+Steps: 	480000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031306532534929 nn.SpatialConvolution: 0.022059182758516 nn.SpatialConvolution: 0.020891573906738 nn.Linear: 0.0089367434434413 nn.Linear: 0.022407847860007]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.068147636950016 nn.SpatialConvolution: 0.050226747989655 nn.SpatialConvolution: 0.045047089457512 nn.Linear: 0.022650849074125 nn.Linear: 0.054231133311987]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00051692106021944 nn.SpatialConvolution: 0.00030596591115928 nn.SpatialConvolution: 0.00031232612144198 nn.Linear: 5.27089920337e-05 nn.Linear: 0.0035933608392965]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0028014108538628 nn.SpatialConvolution: 0.0063735526055098 nn.SpatialConvolution: 0.0071655819192529 nn.Linear: 0.0025037163868546 nn.Linear: 0.054655965417624]
+Steps: 	500000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031313081663528 nn.SpatialConvolution: 0.022061306975969 nn.SpatialConvolution: 0.020892932573751 nn.Linear: 0.0089368684319853 nn.Linear: 0.0224402421297]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.068721950054169 nn.SpatialConvolution: 0.050933450460434 nn.SpatialConvolution: 0.045396264642477 nn.Linear: 0.022711208090186 nn.Linear: 0.054561506956816]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00039817159825745 nn.SpatialConvolution: 0.00025727307430429 nn.SpatialConvolution: 0.00025397284239019 nn.Linear: 6.1793829557861e-05 nn.Linear: 0.0046962643467491]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0025603424292058 nn.SpatialConvolution: 0.0049741957336664 nn.SpatialConvolution: 0.0057930797338486 nn.Linear: 0.0026856171898544 nn.Linear: 0.088184148073196]
+V	0.38877467644215	TD error	0.021313293218613	Qmax	1
+
+Steps: 500000 (frames: 2000000), reward: 2.30, epsilon: 0.05, lr: 0.00025, training time: 5352s, training rate: 186fps, testing time: 1196s, testing rate: 418fps,  num. ep.: 226,  num. rewards: 246
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	520000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031321765080162 nn.SpatialConvolution: 0.022064421783853 nn.SpatialConvolution: 0.020894936979262 nn.Linear: 0.0089369723584287 nn.Linear: 0.022429232781035]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.069280162453651 nn.SpatialConvolution: 0.051482506096363 nn.SpatialConvolution: 0.045898046344519 nn.Linear: 0.022733794525266 nn.Linear: 0.054192159324884]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00023771507111077 nn.SpatialConvolution: 0.0001159832374116 nn.SpatialConvolution: 0.00012442225639351 nn.Linear: 5.2569550598044e-05 nn.Linear: 0.00538753577468]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.001083075767383 nn.SpatialConvolution: 0.0023862207308412 nn.SpatialConvolution: 0.0026624852325767 nn.Linear: 0.0024959228467196 nn.Linear: 0.079468861222267]
+Steps: 	540000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031332785205348 nn.SpatialConvolution: 0.022068632153087 nn.SpatialConvolution: 0.020898349921687 nn.Linear: 0.0089373171780831 nn.Linear: 0.022500513812626]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.069919116795063 nn.SpatialConvolution: 0.051738798618317 nn.SpatialConvolution: 0.046501599252224 nn.Linear: 0.022856121882796 nn.Linear: 0.054675426334143]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00054480067597014 nn.SpatialConvolution: 0.00037258586875373 nn.SpatialConvolution: 0.00035853848766603 nn.Linear: 6.2395065456307e-05 nn.Linear: 0.0033833106282479]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0033391616307199 nn.SpatialConvolution: 0.0073085161857307 nn.SpatialConvolution: 0.0083464048802853 nn.Linear: 0.0022169607691467 nn.Linear: 0.040233913809061]
+Steps: 	560000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031345515875212 nn.SpatialConvolution: 0.022072880547649 nn.SpatialConvolution: 0.02090113921881 nn.Linear: 0.0089373326567833 nn.Linear: 0.02250760481104]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.070543266832829 nn.SpatialConvolution: 0.052290547639132 nn.SpatialConvolution: 0.047041073441505 nn.Linear: 0.022961093112826 nn.Linear: 0.054488681256771]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00073814535393517 nn.SpatialConvolution: 0.00050369879436956 nn.SpatialConvolution: 0.00051661845141855 nn.Linear: 9.4888961098223e-05 nn.Linear: 0.0050796874994851]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0056192115880549 nn.SpatialConvolution: 0.010799619369209 nn.SpatialConvolution: 0.012712891213596 nn.Linear: 0.0030171251855791 nn.Linear: 0.044352259486914]
+Steps: 	580000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031361401142024 nn.SpatialConvolution: 0.022078736945417 nn.SpatialConvolution: 0.020906112527138 nn.Linear: 0.0089377483307281 nn.Linear: 0.022532828427452]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.071259707212448 nn.SpatialConvolution: 0.052550066262484 nn.SpatialConvolution: 0.0478111281991 nn.Linear: 0.023240718990564 nn.Linear: 0.054739154875278]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00037545071381018 nn.SpatialConvolution: 0.00020544315322667 nn.SpatialConvolution: 0.00019803468547241 nn.Linear: 6.1386167278044e-05 nn.Linear: 0.0057480616588027]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.002981984987855 nn.SpatialConvolution: 0.0043649491854012 nn.SpatialConvolution: 0.0048582553863525 nn.Linear: 0.0024888832122087 nn.Linear: 0.090571247041225]
+Steps: 	600000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031377871891482 nn.SpatialConvolution: 0.022084915287792 nn.SpatialConvolution: 0.020910723329092 nn.Linear: 0.0089379907530539 nn.Linear: 0.022527430753656]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.072020761668682 nn.SpatialConvolution: 0.052877303212881 nn.SpatialConvolution: 0.048549633473158 nn.Linear: 0.023518977686763 nn.Linear: 0.054250005632639]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0021730972359669 nn.SpatialConvolution: 0.0014760869250823 nn.SpatialConvolution: 0.0013544822420465 nn.Linear: 0.00026810762018493 nn.Linear: 0.013710556453369]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.018312880769372 nn.SpatialConvolution: 0.03134860470891 nn.SpatialConvolution: 0.033583734184504 nn.Linear: 0.010137230157852 nn.Linear: 0.28433763980865]
+Steps: 	620000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031398417635295 nn.SpatialConvolution: 0.022092358720927 nn.SpatialConvolution: 0.020916441584134 nn.Linear: 0.0089382784858954 nn.Linear: 0.022568212686087]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.072884269058704 nn.SpatialConvolution: 0.053194552659988 nn.SpatialConvolution: 0.049312755465508 nn.Linear: 0.023820482194424 nn.Linear: 0.054544843733311]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00030495663733189 nn.SpatialConvolution: 0.000111933699432 nn.SpatialConvolution: 7.2033300346357e-05 nn.Linear: 5.3669406163121e-05 nn.Linear: 0.0071466587851916]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0020900915842503 nn.SpatialConvolution: 0.0017387944972143 nn.SpatialConvolution: 0.001856631715782 nn.Linear: 0.0025400165468454 nn.Linear: 0.08878543227911]
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	640000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031420464035385 nn.SpatialConvolution: 0.022100612549568 nn.SpatialConvolution: 0.020922796866815 nn.Linear: 0.008938509003043 nn.Linear: 0.022632250160629]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.073727615177631 nn.SpatialConvolution: 0.053782861679792 nn.SpatialConvolution: 0.050180152058601 nn.Linear: 0.024135125800967 nn.Linear: 0.054409794509411]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0023546723233646 nn.SpatialConvolution: 0.001551092127363 nn.SpatialConvolution: 0.0012680997041541 nn.Linear: 0.00026545838036733 nn.Linear: 0.013617760372748]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.023394167423248 nn.SpatialConvolution: 0.033623836934566 nn.SpatialConvolution: 0.032572709023952 nn.Linear: 0.0097316987812519 nn.Linear: 0.25517916679382]
+Steps: 	660000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031446504507263 nn.SpatialConvolution: 0.022110619781863 nn.SpatialConvolution: 0.020930450761001 nn.Linear: 0.0089389453143418 nn.Linear: 0.022737822155764]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.07466171681881 nn.SpatialConvolution: 0.054791763424873 nn.SpatialConvolution: 0.051183123141527 nn.Linear: 0.024513335898519 nn.Linear: 0.055019222199917]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0031028133498273 nn.SpatialConvolution: 0.0020682261934301 nn.SpatialConvolution: 0.0015027174152917 nn.Linear: 0.00032167096545461 nn.Linear: 0.01772890099356]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.03031406365335 nn.SpatialConvolution: 0.041927952319384 nn.SpatialConvolution: 0.038223650306463 nn.Linear: 0.012429244816303 nn.Linear: 0.23148998618126]
+Steps: 	680000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031481524579719 nn.SpatialConvolution: 0.022123919686337 nn.SpatialConvolution: 0.020940320181722 nn.Linear: 0.0089393894346727 nn.Linear: 0.022919770914643]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.075943641364574 nn.SpatialConvolution: 0.056110959500074 nn.SpatialConvolution: 0.052524283528328 nn.Linear: 0.024944527074695 nn.Linear: 0.056207854300737]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0028169235267479 nn.SpatialConvolution: 0.0020013504801683 nn.SpatialConvolution: 0.0014407998608346 nn.Linear: 0.00032005722459101 nn.Linear: 0.0167617486078]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.033178515732288 nn.SpatialConvolution: 0.044403854757547 nn.SpatialConvolution: 0.037793047726154 nn.Linear: 0.011778042651713 nn.Linear: 0.28192889690399]
+Steps: 	700000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031522304957401 nn.SpatialConvolution: 0.02213916827205 nn.SpatialConvolution: 0.020951761416062 nn.Linear: 0.0089399024108711 nn.Linear: 0.023100062113004]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.077350497245789 nn.SpatialConvolution: 0.057458303868771 nn.SpatialConvolution: 0.05394271761179 nn.Linear: 0.025487052276731 nn.Linear: 0.056481562554836]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.001476876665663 nn.SpatialConvolution: 0.00097822905538628 nn.SpatialConvolution: 0.00065838135521566 nn.Linear: 0.00014966028847643 nn.Linear: 0.0075147525651114]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.015763472765684 nn.SpatialConvolution: 0.02176396921277 nn.SpatialConvolution: 0.016940057277679 nn.Linear: 0.0047592036426067 nn.Linear: 0.12348639219999]
+Steps: 	720000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031572535359733 nn.SpatialConvolution: 0.022157716807605 nn.SpatialConvolution: 0.020966013370646 nn.Linear: 0.0089403494642041 nn.Linear: 0.023221563204761]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.079324670135975 nn.SpatialConvolution: 0.059030920267105 nn.SpatialConvolution: 0.055614661425352 nn.Linear: 0.026042265817523 nn.Linear: 0.056975543498993]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0016860041402313 nn.SpatialConvolution: 0.001268829853096 nn.SpatialConvolution: 0.00080452855293616 nn.Linear: 0.00020748133181481 nn.Linear: 0.01368814534655]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.013588674366474 nn.SpatialConvolution: 0.02945595048368 nn.SpatialConvolution: 0.02029412612319 nn.Linear: 0.0079221008345485 nn.Linear: 0.25179702043533]
+Steps: 	740000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031631745412601 nn.SpatialConvolution: 0.02218007278784 nn.SpatialConvolution: 0.020983209770761 nn.Linear: 0.0089407831917573 nn.Linear: 0.023299730286876]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.082386687397957 nn.SpatialConvolution: 0.061717044562101 nn.SpatialConvolution: 0.057580828666687 nn.Linear: 0.026661166921258 nn.Linear: 0.057337440550327]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00049511437249916 nn.SpatialConvolution: 0.00038171511129778 nn.SpatialConvolution: 0.00021661770342503 nn.Linear: 5.2146313420325e-05 nn.Linear: 0.0026248352036651]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.00420465413481 nn.SpatialConvolution: 0.0087979314848781 nn.SpatialConvolution: 0.0059702191501856 nn.Linear: 0.0015293369069695 nn.Linear: 0.025655804201961]
+V	0.42242845535278	TD error	0.020434429943562	Qmax	1
+
+Steps: 750000 (frames: 3000000), reward: 2.21, epsilon: 0.05, lr: 0.00025, training time: 5338s, training rate: 187fps, testing time: 1100s, testing rate: 454fps,  num. ep.: 224,  num. rewards: 232
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	760000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031711099578919 nn.SpatialConvolution: 0.022209626993401 nn.SpatialConvolution: 0.02100706129018 nn.Linear: 0.0089416474636049 nn.Linear: 0.023535608997687]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.086495660245419 nn.SpatialConvolution: 0.066137790679932 nn.SpatialConvolution: 0.060183294117451 nn.Linear: 0.02747005969286 nn.Linear: 0.058659967035055]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0032933268494289 nn.SpatialConvolution: 0.0019179833569739 nn.SpatialConvolution: 0.00094961170982704 nn.Linear: 0.00023390214407216 nn.Linear: 0.01323722967423]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.026489933952689 nn.SpatialConvolution: 0.035496525466442 nn.SpatialConvolution: 0.027687100693583 nn.Linear: 0.0093750525265932 nn.Linear: 0.25866425037384]
+Steps: 	780000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.031820640349408 nn.SpatialConvolution: 0.022250046691944 nn.SpatialConvolution: 0.021039556454887 nn.Linear: 0.0089426153043663 nn.Linear: 0.023793697657224]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.09178526699543 nn.SpatialConvolution: 0.072033293545246 nn.SpatialConvolution: 0.063540332019329 nn.Linear: 0.028522273525596 nn.Linear: 0.059796188026667]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0007767125665157 nn.SpatialConvolution: 0.00061987760618633 nn.SpatialConvolution: 0.00028545207429952 nn.Linear: 6.514445909792e-05 nn.Linear: 0.0030142614820223]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.0070806005969644 nn.SpatialConvolution: 0.014123134315014 nn.SpatialConvolution: 0.0088756643235683 nn.Linear: 0.0019499401096255 nn.Linear: 0.023259708657861]
+Steps: 	800000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.03198030967689 nn.SpatialConvolution: 0.02230979555196 nn.SpatialConvolution: 0.021088998234853 nn.Linear: 0.0089443671754447 nn.Linear: 0.02423772381743]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.099390543997288 nn.SpatialConvolution: 0.080153316259384 nn.SpatialConvolution: 0.068278156220913 nn.Linear: 0.030118484050035 nn.Linear: 0.062552481889725]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.00091746527031967 nn.SpatialConvolution: 0.0006414786534964 nn.SpatialConvolution: 0.00023340456066702 nn.Linear: 4.9146461277004e-05 nn.Linear: 0.0023538077183588]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.00966034270823 nn.SpatialConvolution: 0.015247998759151 nn.SpatialConvolution: 0.0077303322032094 nn.Linear: 0.0018096271669492 nn.Linear: 0.029115982353687]
+Steps: 	820000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.032223389600345 nn.SpatialConvolution: 0.022405728792495 nn.SpatialConvolution: 0.021165883938102 nn.Linear: 0.0089471544215688 nn.Linear: 0.025058014779157]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.11035903543234 nn.SpatialConvolution: 0.091630473732948 nn.SpatialConvolution: 0.07554429769516 nn.Linear: 0.032385069876909 nn.Linear: 0.066364876925945]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0019176626902597 nn.SpatialConvolution: 0.0011752799607762 nn.SpatialConvolution: 0.00046827621782186 nn.Linear: 9.4504826401436e-05 nn.Linear: 0.0067526544594188]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.014821045100689 nn.SpatialConvolution: 0.028686279430985 nn.SpatialConvolution: 0.014205728657544 nn.Linear: 0.0042888503521681 nn.Linear: 0.069849632680416]
+Steps: 	840000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.032587517408087 nn.SpatialConvolution: 0.022561410584065 nn.SpatialConvolution: 0.021287691885768 nn.Linear: 0.0089521091529233 nn.Linear: 0.026471941336253]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.12510564923286 nn.SpatialConvolution: 0.10701476037502 nn.SpatialConvolution: 0.08678125590086 nn.Linear: 0.035574067384005 nn.Linear: 0.072897620499134]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.021293519236223 nn.SpatialConvolution: 0.0066624039931698 nn.SpatialConvolution: 0.0019434761432674 nn.Linear: 0.00035990000868875 nn.Linear: 0.010893761907368]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.26166036725044 nn.SpatialConvolution: 0.1279226988554 nn.SpatialConvolution: 0.060809724032879 nn.Linear: 0.012082139961421 nn.Linear: 0.11076278239489]
+Steps: 	860000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.033178555955655 nn.SpatialConvolution: 0.022817207463847 nn.SpatialConvolution: 0.0214594170812 nn.Linear: 0.0089601115368564 nn.Linear: 0.02862565734226]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.14547918736935 nn.SpatialConvolution: 0.12272413820028 nn.SpatialConvolution: 0.10551803559065 nn.Linear: 0.039662018418312 nn.Linear: 0.083169601857662]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.028383709867144 nn.SpatialConvolution: 0.0081636399133759 nn.SpatialConvolution: 0.0030679286397025 nn.Linear: 0.0006175433906697 nn.Linear: 0.016901448166881]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.38778114318848 nn.SpatialConvolution: 0.1534957587719 nn.SpatialConvolution: 0.085675001144409 nn.Linear: 0.033336024731398 nn.Linear: 0.32667610049248]
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	880000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.03377781913527 nn.SpatialConvolution: 0.023095660212917 nn.SpatialConvolution: 0.021614895690116 nn.Linear: 0.0089672002075538 nn.Linear: 0.030331610167034]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.15683843195438 nn.SpatialConvolution: 0.12872807681561 nn.SpatialConvolution: 0.12495984882116 nn.Linear: 0.042412351816893 nn.Linear: 0.091757662594318]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0090871580325442 nn.SpatialConvolution: 0.0011997170097131 nn.SpatialConvolution: 0.00053542812546426 nn.Linear: 9.7983915023179e-05 nn.Linear: 0.0075983557888307]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.10183171182871 nn.SpatialConvolution: 0.048655800521374 nn.SpatialConvolution: 0.01817113161087 nn.Linear: 0.010004782117903 nn.Linear: 0.1005357131362]
+Steps: 	900000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.03431912842508 nn.SpatialConvolution: 0.023338438652709 nn.SpatialConvolution: 0.021743155427417 nn.Linear: 0.0089734127268803 nn.Linear: 0.031724116449239]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.16065983474255 nn.SpatialConvolution: 0.12541872262955 nn.SpatialConvolution: 0.1403477191925 nn.Linear: 0.044215008616447 nn.Linear: 0.098097898066044]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.015901207888785 nn.SpatialConvolution: 0.0030478358004808 nn.SpatialConvolution: 0.00096517768085551 nn.Linear: 0.00020827705239746 nn.Linear: 0.010735283577512]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.16396267712116 nn.SpatialConvolution: 0.10849894583225 nn.SpatialConvolution: 0.030170273035765 nn.Linear: 0.014094735495746 nn.Linear: 0.15266698598862]
+Steps: 	920000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.034894409439823 nn.SpatialConvolution: 0.023585866077327 nn.SpatialConvolution: 0.021860143513709 nn.Linear: 0.0089790141660318 nn.Linear: 0.032892873497548]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.17271260917187 nn.SpatialConvolution: 0.13907246291637 nn.SpatialConvolution: 0.15207061171532 nn.Linear: 0.045139819383621 nn.Linear: 0.10353893041611]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0046470341239959 nn.SpatialConvolution: 0.0010776965928448 nn.SpatialConvolution: 0.00037830423468258 nn.Linear: 5.6549069513315e-05 nn.Linear: 0.0013152574320841]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.060653209686279 nn.SpatialConvolution: 0.039101488888264 nn.SpatialConvolution: 0.019165311008692 nn.Linear: 0.0028789453208447 nn.Linear: 0.011338420212269]
+Steps: 	940000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.035464897670395 nn.SpatialConvolution: 0.023803346629818 nn.SpatialConvolution: 0.021949938320796 nn.Linear: 0.0089832549038266 nn.Linear: 0.033718968667882]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.16950425505638 nn.SpatialConvolution: 0.15655378997326 nn.SpatialConvolution: 0.16408959031105 nn.Linear: 0.045008394867182 nn.Linear: 0.10729925334454]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0052549083659402 nn.SpatialConvolution: 0.0016526681537998 nn.SpatialConvolution: 0.00059001921179276 nn.Linear: 0.00010453128578639 nn.Linear: 0.0049078857406704]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.062602989375591 nn.SpatialConvolution: 0.06635619699955 nn.SpatialConvolution: 0.029756769537926 nn.Linear: 0.0045341914519668 nn.Linear: 0.038243554532528]
+Steps: 	960000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.036327436616718 nn.SpatialConvolution: 0.0240961139637 nn.SpatialConvolution: 0.022091072432341 nn.Linear: 0.0089905471239896 nn.Linear: 0.035110421016061]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.16889581084251 nn.SpatialConvolution: 0.17668098211288 nn.SpatialConvolution: 0.17867359519005 nn.Linear: 0.045915313065052 nn.Linear: 0.11396162956953]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.01834142605136 nn.SpatialConvolution: 0.0038985299503693 nn.SpatialConvolution: 0.001612594919025 nn.Linear: 0.00024924219116139 nn.Linear: 0.0030031794641954]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.2080841511488 nn.SpatialConvolution: 0.34554126858711 nn.SpatialConvolution: 0.083999440073967 nn.Linear: 0.0082982089370489 nn.Linear: 0.028803434222937]
+Steps: 	980000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.037315852367741 nn.SpatialConvolution: 0.024394496000549 nn.SpatialConvolution: 0.02223395896034 nn.Linear: 0.0089977332778108 nn.Linear: 0.036334707941647]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.17425303161144 nn.SpatialConvolution: 0.18892905116081 nn.SpatialConvolution: 0.19243368506432 nn.Linear: 0.046102959662676 nn.Linear: 0.12058725953102]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0094910330504656 nn.SpatialConvolution: 0.0019692565638702 nn.SpatialConvolution: 0.00058911518606583 nn.Linear: 7.662190383937e-05 nn.Linear: 0.0022895902743158]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.1044784039259 nn.SpatialConvolution: 0.091480523347855 nn.SpatialConvolution: 0.020754531025887 nn.Linear: 0.004475271794945 nn.Linear: 0.018801001831889]
+Steps: 	1000000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.038451008855115 nn.SpatialConvolution: 0.024735848934106 nn.SpatialConvolution: 0.022414720236646 nn.Linear: 0.0090079281672008 nn.Linear: 0.038065267082656]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.17732389271259 nn.SpatialConvolution: 0.19246999919415 nn.SpatialConvolution: 0.20449185371399 nn.Linear: 0.046426221728325 nn.Linear: 0.13065184652805]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.007686656246211 nn.SpatialConvolution: 0.0026931641427375 nn.SpatialConvolution: 0.0010357886458899 nn.Linear: 0.00013969830624423 nn.Linear: 0.0024446338166294]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.072512410581112 nn.SpatialConvolution: 0.12869127094746 nn.SpatialConvolution: 0.04571745917201 nn.Linear: 0.0066273543052375 nn.Linear: 0.02684080787003]
+V	0.46171084856987	TD error	0.033701805442572	Qmax	1
+
+Steps: 1000000 (frames: 4000000), reward: 1.93, epsilon: 0.05, lr: 0.00025, training time: 5409s, training rate: 184fps, testing time: 1112s, testing rate: 449fps,  num. ep.: 646,  num. rewards: 1241
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	1020000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.039470008736778 nn.SpatialConvolution: 0.025044146102863 nn.SpatialConvolution: 0.022572549183937 nn.Linear: 0.0090167232086748 nn.Linear: 0.039442325845364]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.18486371636391 nn.SpatialConvolution: 0.19320084154606 nn.SpatialConvolution: 0.21379129588604 nn.Linear: 0.046388171613216 nn.Linear: 0.13895332813263]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.010097939450323 nn.SpatialConvolution: 0.0028857861041778 nn.SpatialConvolution: 0.00096133712268 nn.Linear: 0.0001325667495536 nn.Linear: 0.0034827079829167]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.10686047375202 nn.SpatialConvolution: 0.098489239811897 nn.SpatialConvolution: 0.036341533064842 nn.Linear: 0.0078587662428617 nn.Linear: 0.053340826183558]
+Steps: 	1040000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.040481688310012 nn.SpatialConvolution: 0.025347789751914 nn.SpatialConvolution: 0.022726219340523 nn.Linear: 0.0090254156937977 nn.Linear: 0.040775361552029]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.18895627558231 nn.SpatialConvolution: 0.21728701889515 nn.SpatialConvolution: 0.21900516748428 nn.Linear: 0.045318726450205 nn.Linear: 0.1467442214489]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.013608174934241 nn.SpatialConvolution: 0.0033912172680226 nn.SpatialConvolution: 0.0011154499528143 nn.Linear: 0.00014353121554875 nn.Linear: 0.0037370890734384]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.32932531833649 nn.SpatialConvolution: 0.18331906199455 nn.SpatialConvolution: 0.056735094636679 nn.Linear: 0.0094589833170176 nn.Linear: 0.046975292265415]
+Steps: 	1060000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.041680597531341 nn.SpatialConvolution: 0.025680240779845 nn.SpatialConvolution: 0.022900176876715 nn.Linear: 0.0090350783952814 nn.Linear: 0.042286911598232]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.19494907557964 nn.SpatialConvolution: 0.23652164638042 nn.SpatialConvolution: 0.22045592963696 nn.Linear: 0.048258885741234 nn.Linear: 0.15346893668175]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.008049118428652 nn.SpatialConvolution: 0.002072839195011 nn.SpatialConvolution: 0.00073024667794618 nn.Linear: 9.4668518444168e-05 nn.Linear: 0.0028013053286781]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.11786644160748 nn.SpatialConvolution: 0.065789759159088 nn.SpatialConvolution: 0.03288958594203 nn.Linear: 0.004039378836751 nn.Linear: 0.023286741226912]
+Steps: 	1080000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.042800220555812 nn.SpatialConvolution: 0.025987560839726 nn.SpatialConvolution: 0.023059048630294 nn.Linear: 0.0090439368049903 nn.Linear: 0.043693492578859]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.21866318583488 nn.SpatialConvolution: 0.25481450557709 nn.SpatialConvolution: 0.21547466516495 nn.Linear: 0.054206315428019 nn.Linear: 0.1595351845026]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.02294179438089 nn.SpatialConvolution: 0.0026347414828018 nn.SpatialConvolution: 0.00066741570603881 nn.Linear: 7.873280239761e-05 nn.Linear: 0.0039501772474389]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.42220598459244 nn.SpatialConvolution: 0.15191613137722 nn.SpatialConvolution: 0.01792062073946 nn.Linear: 0.0069211889058352 nn.Linear: 0.026625664904714]
+Steps: 	1100000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.04365889364711 nn.SpatialConvolution: 0.026247514880607 nn.SpatialConvolution: 0.023200739916927 nn.Linear: 0.0090521677936048 nn.Linear: 0.044966793859039]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.23701553046703 nn.SpatialConvolution: 0.27958151698112 nn.SpatialConvolution: 0.21021619439125 nn.Linear: 0.057977199554443 nn.Linear: 0.16335211694241]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.021446105285296 nn.SpatialConvolution: 0.0086945922398472 nn.SpatialConvolution: 0.0033729723238733 nn.Linear: 0.00042746192921973 nn.Linear: 0.0081807835057238]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.27911940217018 nn.SpatialConvolution: 0.2049145847559 nn.SpatialConvolution: 0.15039163827896 nn.Linear: 0.027739154174924 nn.Linear: 0.064937382936478]
+Steps: 	1120000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.044207678668587 nn.SpatialConvolution: 0.02640589667127 nn.SpatialConvolution: 0.023294072260529 nn.Linear: 0.0090570977043407 nn.Linear: 0.045682877999592]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.24612428247929 nn.SpatialConvolution: 0.29775956273079 nn.SpatialConvolution: 0.21149644255638 nn.Linear: 0.059884395450354 nn.Linear: 0.16520580649376]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.005129858613852 nn.SpatialConvolution: 0.0014654626307653 nn.SpatialConvolution: 0.00079274575955599 nn.Linear: 9.9164999108846e-05 nn.Linear: 0.0014154950335993]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.080101236701012 nn.SpatialConvolution: 0.048769105225801 nn.SpatialConvolution: 0.048094414174557 nn.Linear: 0.008754356764257 nn.Linear: 0.011477958410978]
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	1140000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.044693132050948 nn.SpatialConvolution: 0.026543935231571 nn.SpatialConvolution: 0.023398669383924 nn.Linear: 0.0090625584497397 nn.Linear: 0.046440520430795]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.26941469311714 nn.SpatialConvolution: 0.30804643034935 nn.SpatialConvolution: 0.21773192286491 nn.Linear: 0.059869609773159 nn.Linear: 0.16736304759979]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0050763744326207 nn.SpatialConvolution: 0.0013947991153207 nn.SpatialConvolution: 0.00061404687074016 nn.Linear: 8.7968625257584e-05 nn.Linear: 0.0017499894899558]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.056006368249655 nn.SpatialConvolution: 0.041239831596613 nn.SpatialConvolution: 0.041601300239563 nn.Linear: 0.0073117264546454 nn.Linear: 0.017132502049208]
+Steps: 	1160000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.045189002047361 nn.SpatialConvolution: 0.026723498603598 nn.SpatialConvolution: 0.023502707186868 nn.Linear: 0.0090678721896311 nn.Linear: 0.047269163702696]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.27581378817558 nn.SpatialConvolution: 0.31499782204628 nn.SpatialConvolution: 0.22226540744305 nn.Linear: 0.063333190977573 nn.Linear: 0.17042878270149]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.017959679847024 nn.SpatialConvolution: 0.0040157177008611 nn.SpatialConvolution: 0.0015791731569741 nn.Linear: 0.0001920696476189 nn.Linear: 0.0030054881345532]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.22717566788197 nn.SpatialConvolution: 0.20772716403008 nn.SpatialConvolution: 0.11637900769711 nn.Linear: 0.015208535827696 nn.Linear: 0.027607364580035]
+Steps: 	1180000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.045826292660486 nn.SpatialConvolution: 0.026958082820042 nn.SpatialConvolution: 0.023627479083216 nn.Linear: 0.0090741853199313 nn.Linear: 0.048279905118243]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.27043130993843 nn.SpatialConvolution: 0.32214576005936 nn.SpatialConvolution: 0.2246385216713 nn.Linear: 0.070553585886955 nn.Linear: 0.17371593415737]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.029616875766437 nn.SpatialConvolution: 0.012506504213529 nn.SpatialConvolution: 0.0050217792485695 nn.Linear: 0.00061152160887516 nn.Linear: 0.009310341609613]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.30337670445442 nn.SpatialConvolution: 0.37824836373329 nn.SpatialConvolution: 0.39869686961174 nn.Linear: 0.035388115793467 nn.Linear: 0.088076919317245]
+Steps: 	1200000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.046415093652521 nn.SpatialConvolution: 0.027189324439308 nn.SpatialConvolution: 0.023745060046556 nn.Linear: 0.0090789810334048 nn.Linear: 0.049011449528343]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.27930921316147 nn.SpatialConvolution: 0.32737258076668 nn.SpatialConvolution: 0.22571283578873 nn.Linear: 0.075379274785519 nn.Linear: 0.17668777704239]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0064721301352056 nn.SpatialConvolution: 0.0032179622625715 nn.SpatialConvolution: 0.0014826566267901 nn.Linear: 0.00018528301644098 nn.Linear: 0.0022063589115472]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.050670810043812 nn.SpatialConvolution: 0.087058484554291 nn.SpatialConvolution: 0.12107726931572 nn.Linear: 0.011481870897114 nn.Linear: 0.031065380200744]
+Steps: 	1220000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.046954428742046 nn.SpatialConvolution: 0.027394154942645 nn.SpatialConvolution: 0.023847063795344 nn.Linear: 0.0090833906182872 nn.Linear: 0.049678405127445]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.28625285625458 nn.SpatialConvolution: 0.32459363341331 nn.SpatialConvolution: 0.22631527483463 nn.Linear: 0.079715892672539 nn.Linear: 0.18029601871967]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.010299704359068 nn.SpatialConvolution: 0.0021175015720173 nn.SpatialConvolution: 0.00069314601197722 nn.Linear: 8.7756635823112e-05 nn.Linear: 0.0015216602552453]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.10234655439854 nn.SpatialConvolution: 0.090273842215538 nn.SpatialConvolution: 0.03359055146575 nn.Linear: 0.005871572997421 nn.Linear: 0.012340256012976]
+Steps: 	1240000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.047525286250928 nn.SpatialConvolution: 0.027610206661227 nn.SpatialConvolution: 0.023951340701882 nn.Linear: 0.0090875511458311 nn.Linear: 0.050350268310528]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.30269345641136 nn.SpatialConvolution: 0.3333053290844 nn.SpatialConvolution: 0.22483457624912 nn.Linear: 0.085391066968441 nn.Linear: 0.18339447677135]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.027430726138818 nn.SpatialConvolution: 0.0096988883742701 nn.SpatialConvolution: 0.003130899784046 nn.Linear: 0.00035479393994298 nn.Linear: 0.005112875133301]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.34780034422874 nn.SpatialConvolution: 0.4875196814537 nn.SpatialConvolution: 0.22236846387386 nn.Linear: 0.024963421747088 nn.Linear: 0.05283185467124]
+V	0.38222662311792	TD error	0.038235013127327	Qmax	1
+
+Steps: 1250000 (frames: 5000000), reward: 2.29, epsilon: 0.05, lr: 0.00025, training time: 5457s, training rate: 183fps, testing time: 1115s, testing rate: 448fps,  num. ep.: 590,  num. rewards: 1349
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	1260000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.048025961807791 nn.SpatialConvolution: 0.027807025033042 nn.SpatialConvolution: 0.024054723805141 nn.Linear: 0.009091609455565 nn.Linear: 0.05097702966203]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.31973269581795 nn.SpatialConvolution: 0.3487973511219 nn.SpatialConvolution: 0.22499723732471 nn.Linear: 0.090176448225975 nn.Linear: 0.18706981837749]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.04656805644532 nn.SpatialConvolution: 0.019332834687394 nn.SpatialConvolution: 0.0074349543113153 nn.Linear: 0.00091657277208222 nn.Linear: 0.012667846073554]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.44860222935677 nn.SpatialConvolution: 0.5500048995018 nn.SpatialConvolution: 0.57026219367981 nn.Linear: 0.052277691662312 nn.Linear: 0.15830193459988]
+Steps: 	1280000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.048512910347091 nn.SpatialConvolution: 0.028018166180694 nn.SpatialConvolution: 0.024175738629163 nn.Linear: 0.0090964212257608 nn.Linear: 0.051723177465076]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.33248138427734 nn.SpatialConvolution: 0.35044035315514 nn.SpatialConvolution: 0.22543190419674 nn.Linear: 0.094706602394581 nn.Linear: 0.19121181964874]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0043169467530905 nn.SpatialConvolution: 0.0017303271390627 nn.SpatialConvolution: 0.00070295141952145 nn.Linear: 6.2795627512929e-05 nn.Linear: 0.00072575901683523]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.080025263130665 nn.SpatialConvolution: 0.064454860985279 nn.SpatialConvolution: 0.030784890055656 nn.Linear: 0.0034407617058605 nn.Linear: 0.0065455441363156]
+Steps: 	1300000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.04900269493958 nn.SpatialConvolution: 0.028218009250747 nn.SpatialConvolution: 0.024293043139455 nn.Linear: 0.0091010495625168 nn.Linear: 0.052450310541868]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.34169343113899 nn.SpatialConvolution: 0.35147580504417 nn.SpatialConvolution: 0.22434042394161 nn.Linear: 0.098896630108356 nn.Linear: 0.19560791552067]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.006484342549989 nn.SpatialConvolution: 0.0025740687400259 nn.SpatialConvolution: 0.0013586044545242 nn.Linear: 0.00011976515543817 nn.Linear: 0.0012555687296935]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.066750645637512 nn.SpatialConvolution: 0.14244763553143 nn.SpatialConvolution: 0.07272469997406 nn.Linear: 0.0083011081442237 nn.Linear: 0.014732422307134]
+Steps: 	1320000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.049444869661398 nn.SpatialConvolution: 0.028390403173999 nn.SpatialConvolution: 0.0243961716576 nn.Linear: 0.0091054193333028 nn.Linear: 0.053100675959671]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.3475014269352 nn.SpatialConvolution: 0.35045677423477 nn.SpatialConvolution: 0.22445559501648 nn.Linear: 0.10193083435297 nn.Linear: 0.1996523886919]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.010454158478674 nn.SpatialConvolution: 0.0041177245487876 nn.SpatialConvolution: 0.0024813914010079 nn.Linear: 0.00029153697688132 nn.Linear: 0.002980701494452]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.13472087681293 nn.SpatialConvolution: 0.20626726746559 nn.SpatialConvolution: 0.11617293208838 nn.Linear: 0.021858740597963 nn.Linear: 0.049179077148438]
+Steps: 	1340000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.049856140695201 nn.SpatialConvolution: 0.028549929798337 nn.SpatialConvolution: 0.024489066023147 nn.Linear: 0.0091098019209844 nn.Linear: 0.053677423740186]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.35336866974831 nn.SpatialConvolution: 0.34925243258476 nn.SpatialConvolution: 0.22976550459862 nn.Linear: 0.10375502705574 nn.Linear: 0.20243276655674]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.010461352592375 nn.SpatialConvolution: 0.0029279337315923 nn.SpatialConvolution: 0.0012174489502349 nn.Linear: 0.0001555284700078 nn.Linear: 0.0029594138242759]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.10721861571074 nn.SpatialConvolution: 0.086234539747238 nn.SpatialConvolution: 0.094924762845039 nn.Linear: 0.0097521636635065 nn.Linear: 0.035719376057386]
+Steps: 	1360000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.050278185073353 nn.SpatialConvolution: 0.028713472010357 nn.SpatialConvolution: 0.024581716506381 nn.Linear: 0.0091142865228711 nn.Linear: 0.0542869654248]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.35916206240654 nn.SpatialConvolution: 0.34917494654655 nn.SpatialConvolution: 0.23391892015934 nn.Linear: 0.10487477481365 nn.Linear: 0.20682671666145]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.014946653988461 nn.SpatialConvolution: 0.0068903088710634 nn.SpatialConvolution: 0.0024836088677873 nn.Linear: 0.00027899634346392 nn.Linear: 0.0048305839433042]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.28373017907143 nn.SpatialConvolution: 0.16741463541985 nn.SpatialConvolution: 0.1522366553545 nn.Linear: 0.013588638976216 nn.Linear: 0.053605604916811]
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
+Steps: 	1380000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.050791516074256 nn.SpatialConvolution: 0.028896264922262 nn.SpatialConvolution: 0.024686100962364 nn.Linear: 0.0091190894351243 nn.Linear: 0.054935439988917]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.36211600899696 nn.SpatialConvolution: 0.35247749090195 nn.SpatialConvolution: 0.23690667748451 nn.Linear: 0.1059728115797 nn.Linear: 0.21088424324989]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.0083412875066633 nn.SpatialConvolution: 0.0022476700469581 nn.SpatialConvolution: 0.00077563082578908 nn.Linear: 8.686450876275e-05 nn.Linear: 0.0035025218508865]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.12388309836388 nn.SpatialConvolution: 0.063650265336037 nn.SpatialConvolution: 0.024374170228839 nn.Linear: 0.0047673350200057 nn.Linear: 0.027840178459883]
+Steps: 	1400000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.051334719567099 nn.SpatialConvolution: 0.029094369899329 nn.SpatialConvolution: 0.024801453277545 nn.Linear: 0.0091249051422531 nn.Linear: 0.05568193923826]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.36148265004158 nn.SpatialConvolution: 0.35209771990776 nn.SpatialConvolution: 0.24804025888443 nn.Linear: 0.10628870874643 nn.Linear: 0.21573303639889]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.028160457784827 nn.SpatialConvolution: 0.0087073242527321 nn.SpatialConvolution: 0.0038887209083371 nn.Linear: 0.00043490671893147 nn.Linear: 0.006103350464791]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.35071405768394 nn.SpatialConvolution: 0.34420934319496 nn.SpatialConvolution: 0.29259696602821 nn.Linear: 0.0284956227988 nn.Linear: 0.08233243227005]
+Steps: 	1420000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.051951291990755 nn.SpatialConvolution: 0.029312067473487 nn.SpatialConvolution: 0.024930782987409 nn.Linear: 0.0091311939763014 nn.Linear: 0.056555492115994]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.36656904220581 nn.SpatialConvolution: 0.3603618144989 nn.SpatialConvolution: 0.26206764578819 nn.Linear: 0.10704290866852 nn.Linear: 0.22104306519032]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.014297374471708 nn.SpatialConvolution: 0.0036682774508507 nn.SpatialConvolution: 0.0013759951399377 nn.Linear: 0.00015982456921081 nn.Linear: 0.0037059757466927]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.13285700976849 nn.SpatialConvolution: 0.11392070353031 nn.SpatialConvolution: 0.062379565089941 nn.Linear: 0.0097786290571094 nn.Linear: 0.028361657634377]
+Steps: 	1440000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.052514678649993 nn.SpatialConvolution: 0.029504051627262 nn.SpatialConvolution: 0.025031060019584 nn.Linear: 0.0091354835382602 nn.Linear: 0.05712745082988]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.36728122830391 nn.SpatialConvolution: 0.36592289805412 nn.SpatialConvolution: 0.26997321844101 nn.Linear: 0.10734461247921 nn.Linear: 0.22464361786842]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.03697613041685 nn.SpatialConvolution: 0.0097388122263736 nn.SpatialConvolution: 0.0035023635096421 nn.Linear: 0.00035662777684136 nn.Linear: 0.0072976658943528]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.53006428480148 nn.SpatialConvolution: 0.69919037818909 nn.SpatialConvolution: 0.20861046016216 nn.Linear: 0.033537920564413 nn.Linear: 0.11651226133108]
+Steps: 	1460000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.05288548760999 nn.SpatialConvolution: 0.029652418254141 nn.SpatialConvolution: 0.025101347424703 nn.Linear: 0.0091379506317071 nn.Linear: 0.057432135686586]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.36956387758255 nn.SpatialConvolution: 0.36552557349205 nn.SpatialConvolution: 0.26760944724083 nn.Linear: 0.1075277775526 nn.Linear: 0.22655785083771]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.015294093143038 nn.SpatialConvolution: 0.006812215088572 nn.SpatialConvolution: 0.0032402680237717 nn.Linear: 0.00036911021437882 nn.Linear: 0.0047441348960214]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.17434902489185 nn.SpatialConvolution: 0.2026718556881 nn.SpatialConvolution: 0.24522799253464 nn.Linear: 0.023895522579551 nn.Linear: 0.054345618933439]
+Steps: 	1480000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.053374945472918 nn.SpatialConvolution: 0.02983714189031 nn.SpatialConvolution: 0.02520310789535 nn.Linear: 0.0091420591529908 nn.Linear: 0.058014973563354]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.36632469296455 nn.SpatialConvolution: 0.36234453320503 nn.SpatialConvolution: 0.26574757695198 nn.Linear: 0.10794168710709 nn.Linear: 0.23181749880314]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.027352769810999 nn.SpatialConvolution: 0.010399232757082 nn.SpatialConvolution: 0.0039557137775996 nn.Linear: 0.00048425235903971 nn.Linear: 0.0059448770305052]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.27218398451805 nn.SpatialConvolution: 0.26477959752083 nn.SpatialConvolution: 0.22517132759094 nn.Linear: 0.025361793115735 nn.Linear: 0.062627173960209]
+Steps: 	1500000
+Weight norms:
+nn.Sequential: [nn.SpatialConvolution: 0.05378158777229 nn.SpatialConvolution: 0.029991454285782 nn.SpatialConvolution: 0.025282288729519 nn.Linear: 0.0091451019609426 nn.Linear: 0.058342337954123]
+Weight max:
+nn.Sequential: [nn.SpatialConvolution: 0.3638311624527 nn.SpatialConvolution: 0.36492764949799 nn.SpatialConvolution: 0.26801529526711 nn.Linear: 0.10760290920734 nn.Linear: 0.2334308475256]
+Weight grad norms:
+nn.Sequential: [nn.SpatialConvolution: 0.022164695517261 nn.SpatialConvolution: 0.010286417630533 nn.SpatialConvolution: 0.0032764761877347 nn.Linear: 0.00025154363208912 nn.Linear: 0.0047765532601559]
+Weight grad max:
+nn.Sequential: [nn.SpatialConvolution: 0.21086986362934 nn.SpatialConvolution: 0.2299507856369 nn.SpatialConvolution: 0.16095770895481 nn.Linear: 0.014936069957912 nn.Linear: 0.045677665621042]
+V	0.45077683782578	TD error	0.058177122324705	Qmax	1
+
+Steps: 1500000 (frames: 6000000), reward: 6.12, epsilon: 0.05, lr: 0.00025, training time: 5493s, training rate: 182fps, testing time: 1109s, testing rate: 450fps,  num. ep.: 240,  num. rewards: 1259
+Saved:	DQN3_0_1_breakout_FULL_Y.t7
