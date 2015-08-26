@@ -101,7 +101,7 @@ while step < opt.steps do
         collectgarbage()
     end
 
-    if step%500 == 0 then collectgarbage() end
+    if step%1000 == 0 then collectgarbage() end
 
     if step % opt.eval_freq == 0 and step > learn_start then
 
