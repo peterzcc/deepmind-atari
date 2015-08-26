@@ -33,12 +33,12 @@ agent_params="lr="$lr",ep=1,ep_end="$eps_end",ep_endt="$eps_endt",discount="$dis
 steps=50000000
 eval_freq=250000
 eval_steps=125000
-prog_freq=20000
+prog_freq=5000
 save_freq=125000
 gpu=2
 random_starts=30
 pool_frms="type="$pool_frms_type",size="$pool_frms_size
-num_threads=20
+num_threads=8
 
 args="-framework $FRAMEWORK -game_path $game_path -name $agent_name -env $ENV -env_params $env_params -agent $agent -agent_params $agent_params -steps $steps -eval_freq $eval_freq -eval_steps $eval_steps -prog_freq $prog_freq -save_freq $save_freq -actrep $actrep -gpu $gpu -random_starts $random_starts -pool_frms $pool_frms -seed $seed -threads $num_threads"
 echo $args
