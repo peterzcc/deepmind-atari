@@ -3,17 +3,6 @@ Copyright (c) 2014 Google Inc.
 
 See LICENSE file for full terms of limited license.
 ]]
-local function get_timezone()
-  local now = os.time()
-  return os.difftime(now, os.time(os.date("!*t", now)))
-end
-timezone = get_timezone()
-
--- Return a timezone string in ISO 8601:2000 standard form (+hhmm or -hhmm)
-local function get_tzoffset(timezone)
-  local h, m = math.modf(timezone / 3600)
-  return string.format("%+.4d", 100 * h + 60 * m)
-end
 
 if not dqn then
     require "initenv"
@@ -89,6 +78,7 @@ local episode_reward
 local screen, reward, terminal = game_env:getState()
 
 print("Iteration ..", step)
+print(os.date("%c"))
 while step < opt.steps do
     step = step + 1
     local action_index = agent:perceive(reward, screen, terminal)
@@ -108,8 +98,8 @@ while step < opt.steps do
         assert(step==agent.numSteps, 'trainer step: ' .. step ..
                 ' & agent.numSteps: ' .. agent.numSteps)
         print("Steps: ", step)
-        print("Time: ",get_tzoffset(timezone))
-        agent:report()
+        print(os.date("%c"))
+	agent:report()
         collectgarbage()
     end
 
